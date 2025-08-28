@@ -12,5 +12,14 @@ fun main() {
 TODO: Function that checks if a number is prime
  */
 fun isPrime(n: Int): Boolean {
-    return true;
+    if (n == 1) return true
+    if (n == 2) return false
+
+    if (n < 2) return false
+    for (i in 2 until n) {
+        if (n % i == 0){
+            return false
+        }
+    }
+    return true
 }
